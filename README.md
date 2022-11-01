@@ -1,6 +1,6 @@
 # Multilingual Multi-Granularity Network (mMGN)
 This repository contains the code for the paper:\
-IITD at WANLP 2022 Shared Task: Multilingual Multi-Granularity Network for Propaganda Detection\
+[IITD at WANLP 2022 Shared Task: Multilingual Multi-Granularity Network for Propaganda Detection](https://arxiv.org/abs/2210.17190)\
 [Shubham Mittal](https://scholar.google.com/citations?view_op=list_works&hl=en&authuser=1&hl=en&user=l_bIdRcAAAAJ&authuser=1) and [Preslav Nakov](https://scholar.google.com/citations?user=DfXsKZ4AAAAJ&hl=en)\
 WANLP @ EMNLP 2022
 
@@ -15,34 +15,32 @@ git clone https://gitlab.com/arabic-nlp/propaganda-detection.git
 
 ### Install dependencies
 ```
+git clone https://github.com/sm354/mMGN.git
 cd propaganda-detection
 pip install -r requirements.txt
 cd ..
-git clone https://github.com/sm354/mMGN.git
 conda create --name mmgn python=3.7
 conda activate mmgn
 cd mMGN
 pip install -r requirements.txt
 ```
 
-## Training
-### Task 1: multi-label classification problem
+## Task 1: multi-label classification problem
+### Training
 ```
 python run_task1.py --train --plm xlm-roberta-large --checkdir checkpoints --bs 32 --plm_lr 1e-5 --lr 3e-4 --ep 40 --name task1_xlmr --trainset ../propaganda-detection/data/task1_train.json --devset ../propaganda-detection/data/task1_dev_test.json
 ```
-
-### Task 2: sequence tagging problem
-```
-python run_task2.py --train --plm bert-base-multilingual-cased --checkdir checkpoints --bs 16 --plm_lr 3e-5 --ep 30 --name task2_mMGN --trainset ../propaganda-detection/data/task2_train.json --devset ../propaganda-detection/data/task2_dev_test.json 
-```
-
-## Testing
-### Task 1
+### Testing
 ```
 python run_task1.py --weights checkpoints/task1_xlmr.pt --plm xlm-roberta-large --checkdir checkpoints --name task1_xlmr --testset ../propaganda-detection/data/task1_test_gold_label_final.json
 ```
 
-### Task 2
+## Task 2: sequence tagging problem using mMGN
+### Training
+```
+python run_task2.py --train --plm bert-base-multilingual-cased --checkdir checkpoints --bs 16 --plm_lr 3e-5 --ep 30 --name task2_mMGN --trainset ../propaganda-detection/data/task2_train.json --devset ../propaganda-detection/data/task2_dev_test.json 
+```
+### Testing
 ```
 python run_task2.py --weights checkpoints/task2_mMGN.pt --plm xlm-roberta-large --checkdir checkpoints --name task2_mMGN --testset ../propaganda-detection/data/task2_test_gold_label_final.json
 ```
