@@ -16,13 +16,13 @@ git clone https://gitlab.com/arabic-nlp/propaganda-detection.git
 ### Install dependencies
 ```
 git clone https://github.com/sm354/mMGN.git
-cd propaganda-detection
-pip install -r requirements.txt
-cd ..
 conda create --name mmgn python=3.7
 conda activate mmgn
-cd mMGN
-pip install -r requirements.txt
+pip install -r mMGN/requirements.txt
+```
+Install dependencies required for official scorer
+```
+pip install -r propaganda-detection/requirements.txt
 ```
 
 ## Task 1: multi-label classification problem
