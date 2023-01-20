@@ -63,14 +63,20 @@ python3 task-2-semeval21_scorer.py -s ../../mMGN/checkpoints/task2_mMGN.json -r 
 ## Cite
 If you use or extend our work, please cite:
 ```
-@InProceedings{
-    wanlp:2022:task1,2:iitd, 
-    author = {Mittal, Shubham and Nakov, Preslav},
-    title = "IITD at WANLP 2022 Shared Task: Multilingual Multi-Granularity Network for Propaganda Detection",
-    booktitle = "Proceedings of the Seventh Arabic Natural Language Processing Workshop",
-    month = Dec,
-    year = "2022",
-    address = "Abu Dhabi, UAE",
-    publisher = "Association for Computational Linguistics",
+@article{DBLP:journals/corr/abs-2210-17190,
+  author    = {Shubham Mittal and
+               Preslav Nakov},
+  title     = {{IITD} at the {WANLP} 2022 Shared Task: Multilingual Multi-Granularity
+               Network for Propaganda Detection},
+  journal   = {CoRR},
+  volume    = {abs/2210.17190},
+  year      = {2022},
+  url       = {https://doi.org/10.48550/arXiv.2210.17190},
+  doi       = {10.48550/arXiv.2210.17190},
+  eprinttype = {arXiv},
+  eprint    = {2210.17190},
+  timestamp = {Thu, 03 Nov 2022 09:50:24 +0100},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2210-17190.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 ```
