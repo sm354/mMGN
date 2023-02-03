@@ -1,6 +1,6 @@
 # Multilingual Multi-Granularity Network (mMGN)
 This repository contains the code for the paper:\
-[IITD at WANLP 2022 Shared Task: Multilingual Multi-Granularity Network for Propaganda Detection](https://arxiv.org/abs/2210.17190)\
+[IITD at WANLP 2022 Shared Task: Multilingual Multi-Granularity Network for Propaganda Detection](https://aclanthology.org/2022.wanlp-1.63/)\
 [Shubham Mittal](https://scholar.google.com/citations?view_op=list_works&hl=en&authuser=1&hl=en&user=l_bIdRcAAAAJ&authuser=1) and [Preslav Nakov](https://scholar.google.com/citations?user=DfXsKZ4AAAAJ&hl=en)\
 WANLP @ EMNLP 2022
 
@@ -63,20 +63,17 @@ python3 task-2-semeval21_scorer.py -s ../../mMGN/checkpoints/task2_mMGN.json -r 
 ## Cite
 If you use or extend our work, please cite:
 ```
-@article{DBLP:journals/corr/abs-2210-17190,
-  author    = {Shubham Mittal and
-               Preslav Nakov},
-  title     = {{IITD} at the {WANLP} 2022 Shared Task: Multilingual Multi-Granularity
-               Network for Propaganda Detection},
-  journal   = {CoRR},
-  volume    = {abs/2210.17190},
-  year      = {2022},
-  url       = {https://doi.org/10.48550/arXiv.2210.17190},
-  doi       = {10.48550/arXiv.2210.17190},
-  eprinttype = {arXiv},
-  eprint    = {2210.17190},
-  timestamp = {Thu, 03 Nov 2022 09:50:24 +0100},
-  biburl    = {https://dblp.org/rec/journals/corr/abs-2210-17190.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{mittal-nakov-2022-iitd,
+    title = "{IITD} at {WANLP} 2022 Shared Task: Multilingual Multi-Granularity Network for Propaganda Detection",
+    author = "Mittal, Shubham  and
+      Nakov, Preslav",
+    booktitle = "Proceedings of the The Seventh Arabic Natural Language Processing Workshop (WANLP)",
+    month = dec,
+    year = "2022",
+    address = "Abu Dhabi, United Arab Emirates (Hybrid)",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.wanlp-1.63",
+    pages = "529--533",
+    abstract = "We present our system for the two subtasks of the shared task on propaganda detection in Arabic, part of WANLP{'}2022. Subtask 1 is a multi-label classification problem to find the propaganda techniques used in a given tweet. Our system for this task uses XLM-R to predict probabilities for the target tweet to use each of the techniques. In addition to finding the techniques, subtask 2 further asks to identify the textual span for each instance of each technique that is present in the tweet; the task can be modelled as a sequence tagging problem. We use a multi-granularity network with mBERT encoder for subtask 2. Overall, our system ranks second for both subtasks (out of 14 and 3 participants, respectively). Our experimental results and analysis show that it does not help to use a much larger English corpus annotated with propaganda techniques, regardless of whether used in English or after translation to Arabic.",
 }
 ```
