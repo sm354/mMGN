@@ -1,6 +1,6 @@
 # Multilingual Multi-Granularity Network (mMGN)
 This repository contains the code for the paper:\
-[IITD at WANLP 2022 Shared Task: Multilingual Multi-Granularity Network for Propaganda Detection](https://aclanthology.org/2022.wanlp-1.63/)\
+[Multilingual Multi-Granularity Network for Propaganda Detection](https://aclanthology.org/2022.wanlp-1.63/)\
 [Shubham Mittal](https://scholar.google.com/citations?view_op=list_works&hl=en&authuser=1&hl=en&user=l_bIdRcAAAAJ&authuser=1) and [Preslav Nakov](https://scholar.google.com/citations?user=DfXsKZ4AAAAJ&hl=en)\
 WANLP @ EMNLP 2022
 
